@@ -6,7 +6,7 @@ startPos = 0
 endPos = 9
 
 while found == False and startPos <= endPos:
-    midPos = (startPos + endPos) // 2  # double // returns int as single / returns float
+    midPos = (startPos + endPos) // 2  # double // returns integer value... as single / returns float
     if target == number[midPos]:
         found = True
     elif target < number[midPos]:
