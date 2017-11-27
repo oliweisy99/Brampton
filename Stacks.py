@@ -1,15 +1,18 @@
+stack = []
+topPos = -1
+basePos = 0
 
-
-def push(item, stack):
+def push(item):
     global topPos
-    topPos = 0
     topPos += 1
-    stack[topPos] = item
+    stack.append(item)
+    print(stack, topPos)
 
-def pop(topPos):
-    global output, stack
+
+def pop():
+    global topPos
     output = stack[topPos]
+    print("Should output ",output,topPos)
     topPos -= 1
     return output
-
 

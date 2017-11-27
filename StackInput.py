@@ -1,12 +1,15 @@
 
-from Stacks import *
-count = 0
-stack = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-stackMaxPos = 10
+import Stacks
 
 
 for count in range(0, 10):
     index = input("enter a character")
-    push(index, stack)
+    Stacks.push(index)
 
-print(stack)
+msg = ""
+count = Stacks.topPos
+print(count)
+while count >= Stacks.basePos:
+    msg = msg + Stacks.pop() + ", "
+    count -= 1
+print(msg)
