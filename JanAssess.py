@@ -21,15 +21,15 @@ def askRep(numRan, team) : # getting count for guesses
     return count
 
 
-def printCount(ar, f, s, rno, rnt) :
+def printCount(ar, f, s, rno, rnt) : # displays guesses made
     global teamOne, teamTwo
     teamOne = ar(rno, f)
-    print(f, " : ", teamOne)
+    print(f, " had ", teamOne, " guesses")
     teamTwo = ar(rnt, s)
-    print(s, " : ", teamTwo)
+    print(s, " had ", teamTwo, " guesses")
 
 
-def decision(to, tt, f, s) :
+def decision(to, tt, f, s) : # works out and displays the winner
     if tt > to :
         print("team ", f, "wins")
     elif tt < to :
@@ -37,7 +37,7 @@ def decision(to, tt, f, s) :
     else :
         print("draw")
 
-while True :
+while True : # loop to play until they want to quit
     first = random.choice(nameArr)
     second = random.choice(nameArr)
     ranNum = random.randint(1,10)
