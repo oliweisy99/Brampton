@@ -19,7 +19,7 @@ def dequeue(thequeue): # takes the first item of the queue
     return output
 
 def processqueue(character, thequeue): # display the first item in the queue in lower case
-    character = dequeue(thequeue) #NOT SURE WHAT TO DO HERE - i had dequeue but didnt make sense
+    character = dequeue(thequeue)
     print(character.lower())
 
 def queueempty(): # tests to see if the queue is empty
@@ -33,7 +33,7 @@ def queueempty(): # tests to see if the queue is empty
 
 # new main program
 count = 0
-while True: # doesnt work????
+while True:
     character = input("enter character")
     enqueue(thequeue, character)
     count = count + 1

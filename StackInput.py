@@ -13,3 +13,4 @@ while count >= Stacks.basePos:
     msg = msg + Stacks.pop() + ", "
     count -= 1
 print(msg)
+
