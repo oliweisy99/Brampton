@@ -14,6 +14,13 @@ second = random.choice(nameArr)
 ranNum = random.randint(0,10) # picking two random numbers
 ranNumTwo = random.randint(0,10)
 
+# def choice(f, s, rn, rnt) :
+# f = ...
+# s = ...
+# rn = ...
+# rnt = ...
+
+
 def askRep(numRan, team) : # getting count for guesses
     global count
     count = 0
@@ -25,10 +32,20 @@ def askRep(numRan, team) : # getting count for guesses
             count = count + 1
     return count
 
+
 teamOne = askRep(ranNum, first)
 print(first, " : ", teamOne)
 teamTwo = askRep(ranNumTwo, second)
 print(second, " : ", teamTwo) # printing counts for guesses
+
+# def printCount(ar(), f, s, rnt, rn) :
+    # global teamone, teamTWo
+    # teamOne = ar(rno, f)
+    # print ...
+    # teamTwo = ar(rnt, s)
+    #print...
+
+
 
 
 if teamTwo > teamOne : # deciding who wins
@@ -38,4 +55,20 @@ elif teamTwo < teamOne :
 else :
     print("draw")
 
+# def decision(to, tw, f, s) :
+    # if tt > to :
+        # pr(..f.)
+        #...
+
+
+
+# while True :
+    # choice(first, second, ranNum, ranNumTwo)
+    # printCount(askRep(), first, second, ranNumTwo, ranNum)
+    # decision(teamOne, teamTwo, first, second)
+    # quit = int(input(("would you like to quit[ 1 = yes, 0, no]"))
+        # if quit = 1
+            # break
+        # else :
+            # continue
 
