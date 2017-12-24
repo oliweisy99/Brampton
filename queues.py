@@ -1,3 +1,8 @@
+'''
+a queue just inputs values, stores them until the space is full, then outputs the first value inputted, then outputs
+then value after that which was inputted etc
+'''
+
 startPos = 0
 endPos = -1
 thequeue = []
