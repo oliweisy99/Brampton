@@ -48,9 +48,9 @@ for x in range(4):
         else :
             StockC = toppings[tChoice - 1][1]
             StockC = StockC - 1
-            toppings[tChoice - 1][1] = toppings[tChoice - 1][StockC]
+            StockC = toppings[tChoice - 1][1]
             if toppings[tChoice - 1][1] >= 1:
-                continue
+                break
             else :
                 print(toppings[tChoice - 1][0], " ", "is out of stock")
             break
@@ -60,6 +60,7 @@ for x in range(4):
         continue
     else :
         x = 4
+        break
 
 
 
