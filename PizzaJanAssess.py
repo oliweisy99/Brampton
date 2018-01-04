@@ -35,6 +35,7 @@ while True:
         print("invalid input, try again")
         continue
 x = 0
+Checker = 0
 topChoices = [0, 1, 2, 3, 4]
 for x in range(4):
     while True:
@@ -46,9 +47,11 @@ for x in range(4):
             print("not valid topping, try again")
             continue
         else :
-            StockC = toppings[tChoice - 1][1]
-            StockC = StockC - 1
-            StockC = toppings[tChoice - 1][1]
+            Checker = toppings[tChoice - 1][1]
+            Checker = Checker - 1
+            toppings[tChoice - 1][1] = Checker
+            break
+            '''
             if toppings[tChoice - 1][1] >= 1:
                 break
             else :
@@ -61,8 +64,13 @@ for x in range(4):
     else :
         x = 4
         break
-
-
+        '''
+p = 0
+for i in range(10) :
+    topping = toppings[i][0]
+    StockL = toppings[i][1]
+    print(p, " ", topping, " ", StockL)
+    p = p + 1
 
 
 
