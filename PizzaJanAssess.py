@@ -34,24 +34,33 @@ while True:
     else :
         print("invalid input, try again")
         continue
-
+x = 0
 topChoices = [0, 1, 2, 3, 4]
-while True:
-    tChoice = int(input("select a topping choice from the list [0-9]"))
-    if tChoice < 0 :
-        print("not valid topping, try again")
-        continue
-    if tChoice > 9 :
-        print("not valid topping, try again")
-        continue
-    else :
-        toppings[tChoice - 1][1] -= toppings[tChoice - 1][1]
-        if toppings[tChoice - 1][1] >= 1:
+for x in range(4):
+    while True:
+        tChoice = int(input("select a topping choice from the list [0-9]"))
+        if tChoice < 0 :
+            print("not valid topping, try again")
+            continue
+        if tChoice > 9 :
+            print("not valid topping, try again")
             continue
         else :
-            print(toppings[tChoice - 1][0], " ", "is out of stock")
-        topChoices[0] = tChoice
-        break
+            StockC = toppings[tChoice - 1][1]
+            StockC = StockC - 1
+            toppings[tChoice - 1][1] = toppings[tChoice - 1][StockC]
+            if toppings[tChoice - 1][1] >= 1:
+                continue
+            else :
+                print(toppings[tChoice - 1][0], " ", "is out of stock")
+            break
+    topChoices[x] = tChoice
+    checker = input("would you like to add another topping? [Y/N]")
+    if checker == "Y":
+        continue
+    else :
+        x = 4
+
 
 
 
