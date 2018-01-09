@@ -1,4 +1,4 @@
-nullPointer = 0
+nullPointer = -1
 
 class node:
     def __init__(self):
