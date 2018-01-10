@@ -24,4 +24,14 @@ while i != nullPointer:
     print(myList[i].data)
     i = myList[i].pointer
 
+def findNode(target):
+    global index, foundPtr
+    index = 0
+    while index != nullPointer and myList[index].data != target:
+        index = myList[index].pointer
+    foundPtr = index
+    return foundPtr
 
+print('Result of search for e is: ', findNode("e"))
+print('Result of search for l is: ', findNode("l"))
+print('Result of serach for m is: ', findNode("m"))
