@@ -34,4 +34,8 @@ def findNode(target):
 
 print('Result of search for e is: ', findNode("e"))
 print('Result of search for l is: ', findNode("l"))
-print('Result of serach for m is: ', findNode("m"))
+print('Result of serach for p is: ', findNode("p"))
+
+
+for x in range(0,7):
+    print(myList[x].data)
