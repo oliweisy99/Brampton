@@ -39,3 +39,10 @@ print('Result of serach for p is: ', findNode("p"))
 
 for x in range(0,7):
     print(myList[x].data)
+
+
+
+
+
+
+
