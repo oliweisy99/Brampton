@@ -48,9 +48,15 @@ class teacher(person):
         self.specialism = "Computer Science"
 
 
-a = person() # Can change this to student, teacher or person
+a = person()
+aa = person()
 s = student()
-t = teacher()
+ss = student()
+aa.name = "jeffrey"
+ss.age = 123
+ss.studentID = "S002"
+
 a.display()
+aa.display()
+ss.display()
 s.display()
-t.display()
