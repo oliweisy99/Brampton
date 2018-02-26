@@ -19,13 +19,13 @@ class student(person):
     #PRIVATE studentID : STRING
 
     def display(self):
+        print("Student")
         print(self.studentID)
         print(self.name)
         print(self.age)
         print(self.address)
 
     def __init__(self):
-        print("Student")
         self.studentID = "S001"
         super().__init__()
 
@@ -34,6 +34,7 @@ class teacher(person):
     # PRIVATE specialism : STRING
 
     def display(self):
+        print("Teacher")
         print(self.teacherID)
         print(self.specialism)
         print(self.name)
@@ -43,7 +44,6 @@ class teacher(person):
 
     def __init__(self):
         super().__init__()
-        print("Teacher")
         self.teacherID = "T001"
         self.specialism = "Computer Science"
 
