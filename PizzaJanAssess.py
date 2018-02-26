@@ -104,3 +104,11 @@ ll.add_node(2)
 ll.add_node(3)
 ll.list_print()
 '''
+
+'''
+i need to work on:
+- input validation
+- creating, inputting and the overall workings of a linked list
+- classes
+- 2d arrays and how they work 
+'''
