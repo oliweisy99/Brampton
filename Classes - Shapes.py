@@ -1,8 +1,10 @@
+import random
+
 class triangle:
 
     def __init__(self):
-        self.a = 10
-        self.h = 2
+        self.a = random.randint(1,101)
+        self.h = random.randint(1,101)
 
     def printArea(self):
         print(int(self.a * self.h) / 2)
@@ -11,8 +13,8 @@ class triangle:
 class square:
 
     def __init__(self):
-        self.a = 5
-        self.b = 4
+        self.a = random.randint(1,101)
+        self.b = random.randint(1,101)
 
     def printArea(self):
         print(int(self.a * self.b))
