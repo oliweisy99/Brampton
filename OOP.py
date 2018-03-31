@@ -20,6 +20,6 @@ class: a type that combines a record with the methods that operate on the proper
 attributes: the data items of a class
 methods: the subroutines of a class
 object: an instance of a class, so if you created a food class, then f = food() is an instance
-constructor: a special type of method that is called to create a new obkect and initialise its attributes
+constructor: a special type of method that is called to create a new object and initialise its attributes
 
 '''
