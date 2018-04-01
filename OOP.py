@@ -14,12 +14,28 @@ print(__valid("1234"))
 # if you do not understand the question, it is going to be really hard for you to answer it
 # the only and the best way to get good at OOP is to do exam questions on it and make programs with it
 # you need to know what the vocab means as well, otherwise you wont know what the question is refering to
+# when answering questions, do not rush your coding answers because it is so easy to make silly mistakes.
+
 '''
 encapsulation: combining data and subroutines into a class
 class: a type that combines a record with the methods that operate on the properties in the record
-attributes: the data items of a class
+attributes: the data items of a class.
 methods: the subroutines of a class
 object: an instance of a class, so if you created a food class, then f = food() is an instance
 constructor: a special type of method that is called to create a new object and initialise its attributes
+
+
+Lets say you have a super class of member and a sub class of junior
+junior is declared as:
+class junior(member)
+    def __init__(self):
+    super().__init__() # this takes all the defined attributes of the super class member into junior 
+    self.DOB = "" # you can then create an attribute for this subclass that is only used for this subclass. 
+    # the junior sub class takes the attributes of the super class member
+    
+    def setMemberID(self,id):
+    super().setMemberID(ID) # this takes the method SetmemberID of the superclass and uses it for the junior member
+    # you use super().method() to call the method of the super class that you want to use for the subclass
+    # you would then pass through the variable you want that gets run through the super class from the sub class
 
 '''
