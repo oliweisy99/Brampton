@@ -7,7 +7,37 @@ def __valid(s): #two underscores mean is it is private
             isValid = True
     return isValid
 
-print(__valid("1234"))
+#print(__valid("1234"))
+
+class member():
+    def __init__(self):
+        self.__mn = ""
+        self.__mid = ""
+        self.__sp = False
+    def setMn(self, mem):
+        self.mn = mem
+    def setMID(self, id):
+        self.mid = id
+    def setSP(self,paid):
+        self.sp = paid
+
+class junior(member):
+    def __init__(self):
+        super().__init__()
+        self.DOB = ""
+    def SetMN(self, memn):
+        super().setMn(memn)
+    def setMID(self, id):
+        super().setMID(id)
+    def setSP(self, paid):
+        super().setSP(paid)
+
+newMember = junior()
+newMember.SetMN = "holida"
+newMember.setMID = "cheesE"
+print(newMember.setMID)
+print(newMember.SetMN)
+
 
 # a method is a function/procedure starting with def name(self) in a class
 # to answer OOP questions, you have to really understand the question and what everything does
@@ -21,9 +51,9 @@ encapsulation: combining data and subroutines into a class
 class: a type that combines a record with the methods that operate on the properties in the record
 attributes: the data items of a class.
 methods: the subroutines of a class
-object: an instance of a class, so if you created a food class, then f = food() is an instance
+object: it is an instance of a class, so if you created a food class, then f = food() is an instance
 constructor: a special type of method that is called to create a new object and initialise its attributes
-
+instance: read object
 
 Lets say you have a super class of member and a sub class of junior
 junior is declared as:
