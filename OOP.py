@@ -1,3 +1,5 @@
+import random
+
 def __valid(s): #two underscores mean is it is private
     global isValid
     digits = ['0','1','2','3','4','5','6','7','8','9']
@@ -38,6 +40,9 @@ newMember.setMID = "cheesE"
 print(newMember.setMID)
 print(newMember.SetMN)
 
+array = [["E" for i in range(0,7)] for i in range(0,7)]
+
+print(random.randint(0,1000))
 
 # a method is a function/procedure starting with def name(self) in a class
 # to answer OOP questions, you have to really understand the question and what everything does
