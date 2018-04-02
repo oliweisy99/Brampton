@@ -13,6 +13,8 @@ def __valid(s): #two underscores mean is it is private
 
 class member():
     def __init__(self):
+        Sand = "."
+        self.__grid = [[Sand for j in range(30)] for i in range(10)]
         self.__mn = ""
         self.__mid = ""
         self.__sp = False
@@ -40,16 +42,19 @@ newMember.setMID = "cheesE"
 print(newMember.setMID)
 print(newMember.SetMN)
 
-array = [["E" for i in range(0,7)] for i in range(0,7)]
+array = [["E" for i in range(0,7)] for i in range(0,7)] # sets E to all values in 2d array from 8 by 8. so 64 Es.
 
-print(random.randint(0,1000))
+print(random.randint(0,1000)) # from import random, generates a random integer between 0 and 1000
 
 # a method is a function/procedure starting with def name(self) in a class
 # to answer OOP questions, you have to really understand the question and what everything does
 # if you do not understand the question, it is going to be really hard for you to answer it
+# make sure you understand what the question is asking otherwise it is going to be really hard to answer
 # the only and the best way to get good at OOP is to do exam questions on it and make programs with it
 # you need to know what the vocab means as well, otherwise you wont know what the question is refering to
 # when answering questions, do not rush your coding answers because it is so easy to make silly mistakes.
+# when answering the question, plan your answer before writing it down so it makes logical sense to you
+
 
 '''
 encapsulation: combining data and subroutines into a class
