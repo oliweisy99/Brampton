@@ -35,7 +35,7 @@ def insertNode(newItem):
             thisNodePtr = rootPointer # start at the root of the tree
             while thisNodePtr != nullPointer: # while not a lead node
                 previousNodePtr = thisNodePtr # remember this node
-                if tree[thisNodePtr].data > newItem:
+                if tree[thisNodePtr].data > newItem: # if it is bigger
                     turnedLeft = True # follow left pointer
                     thisNodePtr = tree[thisNodePtr].leftPointer
                 else: # follow right pointer
@@ -86,8 +86,13 @@ print("rightp:",tree[6].rightPointer)
     -1 c 6  -1 g -1
           \
        -1 d -1
+
+goes right if it is bigger
+goes left if it is smaller
+
     
 '''
+
 def findNode(searchItem):
     global thisNodePtr, nullPointer, rootPointer
     thisNodePtr = rootPointer # start at the root of the tree
