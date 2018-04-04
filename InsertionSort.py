@@ -23,3 +23,10 @@ for index in range(len(myArray)): # to go through each value in the array
 # move along the array if the number is smaller and ends the while loop of switching numberes
 
 print(myArray)
+
+# to learn how to write this and understand it:
+# write it out, and run your won writen program
+# then after you have gone through your array of numbers
+# write out the program without looking and test it out yourself
+# to revise it, just read the algorithm and do it in your head. if you forgot, try writing it out
+# revise it if you forgot, which your going to if you dont read it enough times.
