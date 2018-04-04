@@ -48,11 +48,11 @@ def insertNode(newItem):
 
 
 insertNode("a")
-insertNode("z")
-insertNode("d")
-insertNode("c")
 insertNode("b")
 insertNode("f")
+insertNode("g")
+insertNode("c")
+insertNode("d")
 print("data:", tree[0].data)
 print("leftp:", tree[0].leftPointer)
 print("rightp:", tree[0].rightPointer)
@@ -75,9 +75,27 @@ print("data:", tree[6].data)
 print("leftp:",tree[6].leftPointer)
 print("rightp:",tree[6].rightPointer)
 
+'''
+
+-1 a 2
+      \ 
+    -1 b 3
+          \
+         5 f 4
+        /     \
+    -1 c 6  -1 g -1
+          \
+       -1 d -1
+    
+'''
 def findNode(searchItem):
-    global thisNodePtr
-    thisNodePtr = rootPointer
-    while
+    global thisNodePtr, nullPointer, rootPointer
+    thisNodePtr = rootPointer # start at the root of the tree
+    while thisNodePtr != nullPointer and tree[thisNodePtr].data != searchItem: # while a pointer to follow and search item not found
+        if tree[thisNodePtr].data > searchItem: # follow left pointer
+            thisNodePtr = tree[thisNodePtr].leftPointer
+        else: # follow right pointer
+            thisNodePtr = tree[thisNodePtr].rightPointer
+    return thisNodePtr # returns pointer to node
 
-
+print(findNode("a")) # returns position in binary tree.
