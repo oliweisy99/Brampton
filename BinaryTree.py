@@ -22,23 +22,23 @@ initialiseTree()
 
 def insertNode(newItem):
     global freePtr, nullPointer, newNodePtr, rootPointer, thisNodePtr, previousNodePtr, turnedLeft
-    if freePtr != nullPointer:
-        newNodePtr = freePtr
-        freePtr = tree[freePtr].leftPointer
+    if freePtr != nullPointer: # if there is space in the array
+        newNodePtr = freePtr # take node from free list
+        freePtr = tree[freePtr].leftPointer # store data item
         tree[newNodePtr].data = newItem
-        tree[newNodePtr].leftPointer = nullPointer
+        tree[newNodePtr].leftPointer = nullPointer # set null pointers
         tree[newNodePtr].rightPointer = nullPointer
 
-        if rootPointer == nullPointer:
-            rootPointer = newNodePtr
-        else:
-            thisNodePtr = rootPointer
-            while thisNodePtr != nullPointer:
-                previousNodePtr = thisNodePtr
+        if rootPointer == nullPointer: # check if empty tree
+            rootPointer = newNodePtr # insert new node at root
+        else: # find insertion point
+            thisNodePtr = rootPointer # start at the root of the tree
+            while thisNodePtr != nullPointer: # while not a lead node
+                previousNodePtr = thisNodePtr # remember this node
                 if tree[thisNodePtr].data > newItem:
-                    turnedLeft = True
+                    turnedLeft = True # follow left pointer
                     thisNodePtr = tree[thisNodePtr].leftPointer
-                else:
+                else: # follow right pointer
                     turnedLeft = False
                     thisNodePtr = tree[thisNodePtr].rightPointer
             if turnedLeft == True:
@@ -75,6 +75,9 @@ print("data:", tree[6].data)
 print("leftp:",tree[6].leftPointer)
 print("rightp:",tree[6].rightPointer)
 
-
+def findNode(searchItem):
+    global thisNodePtr
+    thisNodePtr = rootPointer
+    while
 
 
