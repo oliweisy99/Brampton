@@ -18,9 +18,10 @@ for index in range(len(myArray)): # to go through each value in the array
         currentitem = currentitem - 1
         print(myArray)
     myArray[currentitem + 1] = insertItem
+
 # goes through each number in the array and loops until the number is smaller than the one in front
 # switches the number round if the count number is bigger than the number after it in the array
-# move along the array if the number is smaller and ends the while loop of switching numberes
+# move along the array if the number is smaller and ends the while loop of switching numbers
 
 print(myArray)
 

@@ -9,11 +9,11 @@ def __valid(s): #two underscores mean is it is private
             isValid = True
     return isValid
 
-#print(__valid("1234"))
+# print(__valid("1234"))
 
 class member():
     def __init__(self):
-        Sand = "."
+        Sand = "." # sand is a constant, that is why it doesnt have "self"
         self.__grid = [[Sand for j in range(30)] for i in range(10)]
         self.__mn = ""
         self.__mid = ""
@@ -74,7 +74,7 @@ class junior(member)
     # the junior sub class takes the attributes of the super class member
     
     def setMemberID(self,id):
-    super().setMemberID(ID) # this takes the method SetmemberID of the superclass and uses it for the junior member
+    super().setMemberID(ID) # this takes the method setMemberID of the superclass and uses it for the junior member
     # you use super().method() to call the method of the super class that you want to use for the subclass
     # you would then pass through the variable you want that gets run through the super class from the sub class
 
