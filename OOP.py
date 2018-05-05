@@ -57,6 +57,8 @@ print(random.randint(0,1000)) # from import random, generates a random integer b
 
 
 '''
+set: collection of objects
+record: a group of variables which have different data types 
 encapsulation: combining data and subroutines into a class
 class: a type that combines a record with the methods that operate on the properties in the record
 attributes: the data items of a class.
@@ -72,7 +74,7 @@ class junior(member)
     super().__init__() # this takes all the defined attributes of the super class member into junior 
     self.DOB = "" # you can then create an attribute for this subclass that is only used for this subclass. 
     # the junior sub class takes the attributes of the super class member
-    
+
     def setMemberID(self,id):
     super().setMemberID(ID) # this takes the method setMemberID of the superclass and uses it for the junior member
     # you use super().method() to call the method of the super class that you want to use for the subclass

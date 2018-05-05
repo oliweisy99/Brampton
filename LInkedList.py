@@ -1,47 +1,44 @@
 nullPointer = -1
-
-class node:
+class listNode: # record type to store data and pointer
     def __init__(self):
         self.data = ""
         self.pointer = 0
 
-myList = [node() for index in range(0,9)]
-myList[0].data = "h"
-myList[1].data = "e"
-myList[2].data = "l"
-myList[3].data = "p"
-myList[4].data = "m"
-myList[5].data = "e"
-myList[0].pointer = 1 # o points to 1, 1 points to 2 etc.
-myList[1].pointer = 2
-myList[2].pointer = 3
-myList[3].pointer = 4
-myList[4].pointer = 5
-myList[5].pointer = nullPointer # 5 points to null as it is the end
+startPointer = 0
+freeListPtr = 0
+list = [listNode() for i in range(0,7) ]
 
-i = 0
-while i != nullPointer: # this links each node to the next node
-    print(myList[i].data)
-    i = myList[i].pointer
-
-def findNode(target):
-    global index, foundPtr
-    index = 0
-    while index != nullPointer and myList[index].data != target:
-        index = myList[index].pointer # moves along linked list to next node using the pointer
-    foundPtr = index
-    return foundPtr # returns the pointer location of the target letter to be found
-
-print('Result of search for e is: ', findNode("e"))
-print('Result of search for l is: ', findNode("l"))
-print('Result of serach for p is: ', findNode("p"))
-
-for x in range(0,7):
-    print(myList[x].data)
+def InitialiseList():
+    global startPointer, freeListPtr, nullPointer
+    startPointer = nullPointer # set start pointer
+    freeListPtr = 1 # set starting position of free list
+    for i in range(1,6): # link all nodes to make free list
+        list[i].pointer = i + 1
+    list[7].pointer = nullPointer # last node of free list
 
 
+def InsertNode(newItem):
+    global freeListPtr, previousNodePtr, startPointer
+    if freeListPtr != nullPointer: # then there is space in the array
+        newNodePtr = freeListPtr # take node from free list and store data item
+        list[newNodePtr].data = newItem
+        freeListPtr = list[freeListPtr].pointer
+        # find insertion point
+        thisNodePtr = startPointer # start at the beginning of the list
+        while thisNodePtr != nullPointer and list[thisNodePtr].data < newItem: # while not end of list
+            previousNodePtr = thisNodePtr # remember this node
+            # follow pointer to next node
+            thisNodePtr = list[thisNodePtr].pointer
+        if previousNodePtr == startPointer: # insert new node at start of list
+            list[newNodePtr].pointer = startPointer
+            startPointer = newNodePtr
+        else: # insert new node between previous node and this node
+            list[newNodePtr].pointer = list[previousNodePtr].pointer
+            list[previousNodePtr].pointer = newNodePtr
 
-
-
-
-
+def FindNode(dataItem):
+    currentNodePtr = startPointer
+    while currentNodePtr != nullPointer and list[currentNodePtr].data != dataItem: # not end of list
+        # follow the pointer to the next node
+        currentNodePtr = list[currentNodePtr].pointer
+    return currentNodePtr # returns nullPointer if item not found
