@@ -39,7 +39,6 @@ def InsertNode(newItem):
             list[previousNodePtr].pointer = newNodePtr
 
 def FindNode(dataItem):
-    global
     currentNodePtr = startPointer
     while currentNodePtr != nullPointer and list[currentNodePtr].data != dataItem: # not end of list
         # follow the pointer to the next node
@@ -62,6 +61,7 @@ def DeleteNode(dataitem):
         freeListPtr = thisNodePTr
 
 def outputAllNodes():
+    startPointer = 0
     currentNodePtr = startPointer # start at beginning of list
     while currentNodePtr != nullPointer: # while not end of list
         print(list[currentNodePtr].data) # follow the pointer to the next node
@@ -72,4 +72,4 @@ InsertNode("a")
 InsertNode("b")
 InsertNode("c")
 InsertNode("d")
-FindNode("d")
+outputAllNodes()
