@@ -42,3 +42,24 @@ def FindNode(dataItem):
         # follow the pointer to the next node
         currentNodePtr = list[currentNodePtr].pointer
     return currentNodePtr # returns nullPointer if item not found
+
+def DeleteNode(dataitem):
+    global startPointer, freeListPtr, previousNodePtr
+    thisNodePTr = startPointer # start at beginning of list
+    while thisNodePTr != nullPointer and list[thisNodePTr].data != dataitem: # while not end of list and item not found
+        previousNodePtr = thisNodePTr # remember this node
+        # follow the pointer to the next node
+        thisNodePTr = list[thisNodePTr].pointer
+    if thisNodePTr != nullPointer: # node exists in list
+        if thisNodePTr == startPointer: # first node to be deleted
+            startPointer = list[startPointer].pointer
+        else:
+            list[previousNodePtr].pointer = list[thisNodePTr].pointer
+        list[thisNodePTr].pointer = freeListPtr
+        freeListPtr = thisNodePTr
+
+def outputAllNodes():
+    currentNodePtr = startPointer # start at beginning of list
+    while currentNodePtr != nullPointer: # while not end of list
+        print(list[currentNodePtr].data) # follow the pointer to the next node
+        currentNodePtr = list[currentNodePtr].pointer
