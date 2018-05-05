@@ -5,10 +5,12 @@ class listNode: # record type to store data and pointer
         self.pointer = 0
 
 startPointer = 0
+currentNodePtr = 0
+previousNodePtr = 0
 freeListPtr = 0
-list = [listNode() for i in range(0,7) ]
+list = [listNode() for i in range(0,8) ]
 
-def InitialiseList():
+def initialiseList():
     global startPointer, freeListPtr, nullPointer
     startPointer = nullPointer # set start pointer
     freeListPtr = 1 # set starting position of free list
@@ -37,6 +39,7 @@ def InsertNode(newItem):
             list[previousNodePtr].pointer = newNodePtr
 
 def FindNode(dataItem):
+    global
     currentNodePtr = startPointer
     while currentNodePtr != nullPointer and list[currentNodePtr].data != dataItem: # not end of list
         # follow the pointer to the next node
@@ -63,3 +66,10 @@ def outputAllNodes():
     while currentNodePtr != nullPointer: # while not end of list
         print(list[currentNodePtr].data) # follow the pointer to the next node
         currentNodePtr = list[currentNodePtr].pointer
+
+initialiseList()
+InsertNode("a")
+InsertNode("b")
+InsertNode("c")
+InsertNode("d")
+FindNode("d")
